@@ -1109,6 +1109,7 @@
 (yarg "YARG")
 
 ;highways
+(_0_riski "Riski")
 (_1_black_highway "[Black Highway]")
 (_1_none "[None]")
 (_1_rb2_unused "RB2 (Unused)")

@@ -208,8 +208,8 @@
     (focus sel_section.lst)
     (enter
          {if_else $texrunonce
-            {sel_section.lst set_data (os_tex os_rb2dxprst os_rb2prst os_rb1prst os_rb3prst os_rb4prst os_lrbprst os_tbrbprst)}
-            {sel_section.lst set_data (os_tex os_rb2dxprst os_rb2prst_reset os_rb1prst os_rb3prst os_rb4prst os_lrbprst os_tbrbprst)}}
+            {sel_section.lst set_data (os_tex riski riskidx os_rb2dxprst os_rb2prst os_rb1prst os_rb3prst os_rb4prst os_lrbprst os_tbrbprst)}
+            {sel_section.lst set_data (os_tex riski riskidx os_rb2dxprst os_rb2prst_reset os_rb1prst os_rb3prst os_rb4prst os_lrbprst os_tbrbprst)}}
         {title.lbl set_localized {localize os_trkpreset}})
     (exit)
     (SELECT_MSG
@@ -253,6 +253,110 @@
             {set $spotlightbass FALSE}
             {set $spotlightdrumcustomtexture FALSE}
             {set $spotlightdrum FALSE}
+         )
+         (riski
+            {modifier_mgr deactivate_modifier mod_rb3sustain}
+            {modifier_mgr deactivate_modifier mod_gemdivider}
+            {set $trackangle FALSE}
+            {if_else $texrunonce
+               {do
+                  {set $voxhwcustomtexture TRUE}
+                  {set $voxhw rb2}}
+               {do
+                  {set $voxhwcustomtexture FALSE}
+                  {set $voxhw FALSE}}}
+            {set $gemcustomtexture TRUE}
+            {set $gem riski}
+            {set $smashercustomtexture TRUE}
+            {set $smasher riski}
+            {set $voxarrowcustomtexture TRUE}
+            {set $voxarrow rb2dx}
+            {set $voxnotescustomtexture TRUE}
+            {set $voxnotes rb2dx}
+            {if_else $texrunonce
+               {do
+                  {set $voxodcustomtexture TRUE}
+                  {set $voxod rb2}}
+               {do
+                  {set $voxodcustomtexture FALSE}
+                  {set $voxod FALSE}}}
+            {set $scorecustomtexture TRUE}
+            {set $scoretex rb4}
+            {set $odbarcustomtexture TRUE}
+            {set $odbar riskidx}
+            {if_else $texrunonce
+               {do
+                  {set $railscustomtexture TRUE}
+                  {set $rails rb2}}
+               {do
+                  {set $railscustomtexture FALSE}
+                  {set $rails FALSE}}}
+            {set $flamescustomtexture TRUE}
+            {set $flames rb2dx}
+            {set $multiringcustomtexture TRUE}
+            {set $multiring rb2dx}
+            {set $streakcustomtexture TRUE}
+            {set $streak _0_riski}
+            {set $spotlightgtrcustomtexture TRUE}
+            {set $streak rb4}
+            {set $spotlightgtrcustomtexture TRUE}
+            {set $spotlightgtr rb4}
+            {set $spotlightbasscustomtexture TRUE}
+            {set $spotlightbass rb4}
+            {set $spotlightdrumcustomtexture TRUE}
+            {set $spotlightdrum rb4}
+         )
+         (riskidx
+            {modifier_mgr deactivate_modifier mod_rb3sustain}
+            {modifier_mgr deactivate_modifier mod_gemdivider}
+            {set $trackangle FALSE}
+            {if_else $texrunonce
+               {do
+                  {set $voxhwcustomtexture TRUE}
+                  {set $voxhw rb2}}
+               {do
+                  {set $voxhwcustomtexture FALSE}
+                  {set $voxhw FALSE}}}
+            {set $gemcustomtexture TRUE}
+            {set $gem riskidx}
+            {set $smashercustomtexture TRUE}
+            {set $smasher riskidx}
+            {set $voxarrowcustomtexture TRUE}
+            {set $voxarrow rb2dx}
+            {set $voxnotescustomtexture TRUE}
+            {set $voxnotes rb2dx}
+            {if_else $texrunonce
+               {do
+                  {set $voxodcustomtexture TRUE}
+                  {set $voxod rb2}}
+               {do
+                  {set $voxodcustomtexture FALSE}
+                  {set $voxod FALSE}}}
+            {set $scorecustomtexture TRUE}
+            {set $scoretex rb4}
+            {set $odbarcustomtexture TRUE}
+            {set $odbar riskidx}
+            {if_else $texrunonce
+               {do
+                  {set $railscustomtexture TRUE}
+                  {set $rails rb2}}
+               {do
+                  {set $railscustomtexture FALSE}
+                  {set $rails FALSE}}}
+            {set $flamescustomtexture TRUE}
+            {set $flames rb2dx}
+            {set $multiringcustomtexture TRUE}
+            {set $multiring rb2dx}
+            {set $streakcustomtexture TRUE}
+            {set $streak _0_riski}
+            {set $spotlightgtrcustomtexture TRUE}
+            {set $streak rb4}
+            {set $spotlightgtrcustomtexture TRUE}
+            {set $spotlightgtr rb4}
+            {set $spotlightbasscustomtexture TRUE}
+            {set $spotlightbass rb4}
+            {set $spotlightdrumcustomtexture TRUE}
+            {set $spotlightdrum rb4}
          )
          (os_rb2dxprst
             {modifier_mgr deactivate_modifier mod_rb3sustain}
